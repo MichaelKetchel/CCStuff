@@ -1,0 +1,68 @@
+os.loadAPI('./dumper')
+
+local h = fs.open("out2", "w")
+--h.writeLine("left:")
+--h.writeLine(peripheral.getType('left'))
+--h.writeLine(textutils.serialize(peripheral.getMethods('left')))
+
+--h.writeLine("\n")
+
+function keys (a)
+	local keyset={}
+	local n=0
+
+	for k,v in pairs(a) do
+	  n=n+1
+	  keyset[n]=k
+	end
+	return keyset
+end
+
+function out(string)
+	h.writeLine(string)
+	print(string)
+end
+
+local pipe = peripheral.wrap("left")
+local things = pipe.getAvailableItems()
+
+
+for index, param in pairs(things) do
+        out(index..": ")
+       	--out(param)
+
+        local tempT = {}
+		local Type1 = param.getType1()
+		local Value1 = param.getValue1()
+		local Type2 = param.getType2()
+		local Value2 = param.getValue2()
+
+
+        --out("Type1: "..tostring(Type1))
+        --out(keys(Type1))
+        --out("Value1: "..tostring(Value1))
+        --out(textutils.serialize(keys(Value1)))
+
+        --out("Help:   "..Value1.help())
+        out("Name:   "..Value1.getName())
+        out("ID:     "..Value1.getId())
+        out("Count:  "..tostring(Value2))
+        out("Mod:    "..Value1.getModName())
+        out("Data:   "..Value1.getData())
+        if (Value1.hasTagCompound()) then
+        	out("Tag Compound:")
+        	out(textutils.serialize(Value1.getTagCompound()))
+        end
+        
+        --out("Type2: "..tostring(Type2))
+        --out(tostring(keys(Type2)))
+        --out(tostring(keys(Value2)))
+
+        out();
+        out();
+    end
+
+
+
+h.close()
+print("Saved")

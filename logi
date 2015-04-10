@@ -1,0 +1,36 @@
+os.loadAPI('./lib/json')
+
+local h = fs.open("out", "w")
+--h.writeLine("left:")
+--h.writeLine(peripheral.getType('left'))
+--h.writeLine(textutils.serialize(peripheral.getMethods('left')))
+
+--h.writeLine("\n")
+
+function keys (a)
+	local keyset={}
+	local n=0
+
+	for k,v in pairs(a) do
+	  n=n+1
+	  keyset[n]=k
+	end
+	return keyset
+end
+
+function out(string)
+	h.writeLine(string)
+	h.flush()
+	print(string)
+end
+
+local pipe = peripheral.wrap("left")
+local things = pipe.getAvailableItems()
+local thingsout = {}
+print(pipe.help(3))
+item = pipe.getItemIdentifierIDFor(54,0)
+pipe.makeRequest(item,1)
+--out(json.encode(things))
+
+h.close()
+--print("Saved")

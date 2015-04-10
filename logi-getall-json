@@ -1,0 +1,79 @@
+os.loadAPI('./lib/json')
+
+local h = fs.open("out", "w")
+--h.writeLine("left:")
+--h.writeLine(peripheral.getType('left'))
+--h.writeLine(textutils.serialize(peripheral.getMethods('left')))
+
+--h.writeLine("\n")
+
+function keys (a)
+	local keyset={}
+	local n=0
+
+	for k,v in pairs(a) do
+	  n=n+1
+	  keyset[n]=k
+	end
+	return keyset
+end
+
+function out(string)
+	h.writeLine(string)
+	print(string)
+end
+
+local pipe = peripheral.wrap("left")
+local things = pipe.getAvailableItems()
+local thingsout = {}
+
+for index, param in pairs(things) do
+        out(index..": ")
+       	--out(param)
+
+        local thing = {}
+		local Type1 = param.getType1()
+		local Value1 = param.getValue1()
+		local Type2 = param.getType2()
+		local Value2 = param.getValue2()
+
+		-- Debuggy stuff
+        --out("Type1: "..tostring(Type1))
+        --out(keys(Type1))
+        --out("Value1: "..tostring(Value1))
+        --out(textutils.serialize(keys(Value1)))
+        --out("Help:   "..Value1.help())
+
+        --[[ Plain text dump
+        out("Name:   "..Value1.getName())
+        out("ID:     "..Value1.getId())
+        out("Count:  "..tostring(Value2))
+        out("Mod:    "..Value1.getModName())
+        out("Data:   "..Value1.getData())
+        if (Value1.hasTagCompound()) then
+        	out("Tag Compound:")
+        	out(textutils.serialize(Value1.getTagCompound()))
+        end
+        ]]
+
+        thing.name  = Value1.getName()
+        thing.id    = Value1.getId()
+        thing.count = Value2
+        thing.mod   = Value1.getModName()
+        thing.data  = Value1.getData()
+        if (Value1.hasTagCompound()) then
+        	thing.nbt = Value1.getTagCompound()
+        else
+        	thing.nbt = false
+        end
+
+        table.insert(thingsout,thing)
+        out();
+        out();
+    end
+out("Serialized Data:")
+out(textutils.serialize(thingsout))
+out(json.encode(thingsout))
+
+h.close()
+print("Saved")

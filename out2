@@ -1,0 +1,145 @@
+1: 
+Type1: class logisticspipes.utils.item.ItemIdentifier
+lp",
+  "getId",
+  "getUndamaged",
+  "isFluidContainer",
+  "getName",
+  "help",
+  "hasTagCompound",
+  "getTagCompound",
+  "getModName",
+  "isDamageable",
+  "getType",
+  "getData",
+  "getFluidContainer",
+  "makeStack",
+  "getIgnoringNBT",
+}
+Help:   
+
+
+
+Type: ItemIdentifier
+Commands: 
+ 0   : getName()
+ 1   : getId()
+ 2   : getData()
+ 3   : getModName()
+ 4   : getTagCompound()
+ 5   : makeStack(Double)
+ 6   : getUndamaged()
+ 7   : isFluidContainer()
+ 8   : getFluidContainer()
+ 9   : hasTagCompound()
+10   : getIgnoringNBT()
+11   : isDamageable()
+ID:     443
+Mod:    appliedenergistics2
+Data:   0
+Count: 2
+
+2: 
+Value1: ItemIdentifier [table: 67e13942]
+{
+  "commandHelp",
+  "getId",
+  "getUndamaged",
+  "isFluidContainer",
+  "getName",
+  "help",
+  "hasTagCompound",
+  "getTagCompound",
+  "getModName",
+  "isDamageable",
+  "getType",
+  "getData",
+  "getFluidContainer",
+  "makeStack",
+  "getIgnoringNBT",
+}
+Help:   
+
+
+
+Type: ItemIdentifier
+Commands: 
+ 0   : getName()
+ 1   : getId()
+ 2   : getData()
+ 3   : getModName()
+ 4   : getTagCompound()
+ 5   : makeStack(Double)
+ 6   : getUndamaged()
+ 7   : isFluidContainer()
+ 8   : getFluidContainer()
+ 9   : hasTagCompound()
+10   : getIgnoringNBT()
+11   : isDamageable()
+ID:     1
+Mod:    minecraft
+Data:   0
+Count: 128
+
+3: 
+Value1: ItemIdentifier [table: 5cd5deab]
+{
+  "commandHelp",
+  "getId",
+  "getUndamaged",
+  "isFluidContainer",
+  "getName",
+  "help",
+  "hasTagCompound",
+  "getTagCompound",
+  "getModName",
+  "isDamageable",
+  "getType",
+  "getData",
+  "getFluidContainer",
+  "makeStack",
+  "getIgnoringNBT",
+}
+Help:   
+
+
+
+Type: ItemIdentifier
+Commands: 
+ 0   : getName()
+ 1   : getId()
+ 2   : getData()
+ 3   : getModName()
+ 4   : getTagCompound()
+ 5   : makeStack(Double)
+ 6   : getUndamaged()
+ 7   : isFluidContainer()
+ 8   : getFluidContainer()
+ 9   : hasTagCompound()
+10   : getIgnoringNBT()
+11   : isDamageable()
+ID:     7049
+Mod:    LogisticsPipes
+Data:   14
+sPipes
+Data:   14
+Has TC: 
+",
+        },
+      },
+      type = "NBTTagCompound",
+    },
+    count = 1,
+    mod = "LogisticsPipes",
+    id = 7049,
+  },
+  {
+    name = "Chest",
+    data = 0,
+    nbt = false,
+    count = 32,
+    mod = "minecraft",
+    id = 54,
+  },
+}
+[{"name":"ME Interface","data":0,"nbt":false,"count":2,"mod":"appliedenergistics2","id":443},{"name":"Stone","data":0,"nbt":false,"count":128,"mod":"minecraft","id":1},{"name":"CC Based QuickSort module","data":14,"nbt":{"keys":["moduleInformation","Random-Stack-Prevent","informationList"],"value":{"moduleInformation":{"keys":["Timeout"],"value":{"Timeout":{"value":100,"type":"NBTTagInt"}},"type":"NBTTagCompound"},"Random-Stack-Prevent":{"value":0.80649674,"type":"NBTTagDouble"},"informationList":{"value":[{"value":"Timeout: 100","type":"NBTTagString"}],"type":"NBTTagList"}},"type":"NBTTagCompound"},"count":1,"mod":"LogisticsPipes","id":7049},{"name":"Chest","data":0,"nbt":false,"count":32,"mod":"minecraft","id":54}]

@@ -1,0 +1,13 @@
+local h = fs.open("out", "w")
+h.writeLine("left:")
+h.writeLine(peripheral.getType('left'))
+h.writeLine(textutils.serialize(peripheral.getMethods('left')))
+
+h.writeLine("\n")
+
+local pipe = peripheral.wrap("left")
+
+
+
+h.close()
+print("Saved")

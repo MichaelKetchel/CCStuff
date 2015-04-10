@@ -1,0 +1,28 @@
+left:
+LogisticsPipes:Request
+{
+  "help",
+  "commandHelp",
+  "getType",
+  "getItemAmount",
+  "getCraftableItems",
+  "getAvailableItems",
+  "makeRequest",
+  "makeRequest",
+  "makeRequest",
+  "makeRequest",
+  "sendMessage",
+  "getRouterId",
+  "getRouterUUID",
+  "getRouterUUID",
+  "sendBroadcast",
+  "getLP",
+  "setTurtleConnect",
+  "getTurtleConnect",
+  "getPipeForUUID",
+  "hasLogisticsModule",
+  "getLogisticsModule",
+  "canAccess",
+}
+
+
